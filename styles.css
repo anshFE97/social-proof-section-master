@@ -1,0 +1,246 @@
+:root {
+--Very-Dark-Magenta: hsl(300, 43%, 22%);
+--Soft-Pink: hsl(333, 80%, 67%);
+
+--Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+--Light-Grayish-Magenta: hsl(300, 24%, 96%);
+--White: hsl(0, 0%, 100%);
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-size: 15px;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 30% 30% 30%;
+}
+
+
+.container .first {
+    text-align: center;
+    padding:  3rem 1rem 1rem 1rem;
+}
+
+.container .first h1 {
+    font-size: 2.2rem;
+    color: var(--Very-Dark-Magenta);
+    font-weight: 800;
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+.container .first p {
+     color: var(--Dark-Grayish-Magenta);
+     line-height: 1.5rem;
+     font-weight: 700;
+     padding: 0 1.5rem;
+}
+
+.container .second ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 1.2rem;
+}
+
+.container .second ul li {
+    text-align: center;
+    width: 100%; 
+    padding: 1rem;
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: 5px;
+    margin: 10px;
+    line-height: 25px;;
+}
+
+.container .second ul li p {
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+}
+
+.container .comments { 
+    padding: 3rem 2rem;
+    background-color: var(--Very-Dark-Magenta);
+    margin: 1rem 1.5rem 0;
+    border-radius: 10px;
+    color: var(--White);
+}
+
+.container .comments img {
+    width: 45px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 1rem;
+}
+
+.container .comments h2 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.container .comments h3 {
+    color: var(--Soft-Pink);
+    font-size: 0.8rem;
+    margin-top: 2px;
+    font-weight: 500;
+   
+}
+ 
+.container .comments p {
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    word-spacing: 3px;
+    line-height: 25px;
+    padding-right: 2.5rem;
+}
+
+
+.top img {
+    position: absolute;
+    left: 15%
+}
+
+.bottom img {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  @media (min-width:650px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 1200px;
+        height: 650px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .container .first {
+        text-align: left;
+        grid-column: span 3;
+        padding:  4rem 3rem 3rem 0;
+        
+    }
+
+    .container .first h1 {
+        padding:0;
+        margin-right: 5rem;
+    }
+
+    .container .first p {
+        padding: 0;
+        margin: 1.5rem 3rem 0 0;
+    }
+
+    .container .second {
+        grid-column: span 3;
+    }
+
+    .container .second ul {
+        display: block;
+        padding: 3rem 0 0 0;
+        margin-top: 1.5rem;
+
+        
+    }
+
+    .container .second ul li {
+        display: inline-flex;
+        text-align: left;
+        width: 80%; 
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .container .second ul .linetwo {
+        margin-left: 4rem;
+    }
+
+    .container .second ul .linethree {
+        margin-left: 6rem;
+    }
+
+    .container .second ul li p {
+        margin-left: 2rem;
+    }
+
+    .container .second ul .stars {
+        margin-left: 0;
+    }
+
+
+    .container .comments {
+        grid-column: span 2;
+    }
+
+    .container .third {
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 5rem;
+        padding: 2rem 1rem;
+    }
+
+    .container .fourth {
+        margin-top: 1.5rem;
+        margin-right: 0;
+        margin-bottom: 3rem;
+        padding: 2rem 1rem;
+    }
+
+    .container .fifth {
+        margin-top: 2.5rem;
+        margin-right: 0;
+        margin-bottom: 1rem;
+        padding: 2rem 1rem;
+    }
+
+    .container .comments p {
+        padding-right: 0;
+    }
+
+    .top img {
+        position: absolute;
+        left: 2%
+    }
+    
+    .bottom img {
+        position: absolute;
+        bottom: -5%;
+        left: 25%;
+    }
+
+  }
